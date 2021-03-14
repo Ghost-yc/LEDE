@@ -60,7 +60,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        sed -i '11s/#//' /workdir/openwrt/feeds.conf.default
+        sed -i '10s/#//' /workdir/openwrt/feeds.conf.default
 
     - name: Load custom feeds
       run: |
